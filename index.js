@@ -300,7 +300,6 @@ app.get("*", (req, res) => {
   res.render("404", {
     authenticated: isAuthenticated,
     error: "Page not found",
-    currentPage: '404' 
   });
   return;
 });
