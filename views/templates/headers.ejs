@@ -7,6 +7,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+    .navbar-brand span:nth-child(1) { color: red; }
+.navbar-brand span:nth-child(2) { color: orange; }
+.navbar-brand span:nth-child(3) { color: yellow; }
+.navbar-brand span:nth-child(4) { color: green; }
+.navbar-brand span:nth-child(5) { color: blue; }
+.navbar-brand span:nth-child(6) { color: indigo; }
+.navbar-brand span:nth-child(7) { color: violet; }
+.navbar-brand span:nth-child(8) { color: pink; }
+.navbar-brand span:nth-child(9) { color: brown; }
+.navbar-brand span:nth-child(10) { color: teal; }
+
     .navbar-brand.active {
       color: #337ab7; 
       font-weight: bold;
@@ -37,21 +48,34 @@
         <span class="icon-bar"></span>
       </button> 
       <img src="/hdicon.png" height="40px" style="padding-right: 10px">
-      <a class="navbar-brand active" href="/">NoelTravel</a>
+      <a class="navbar-brand active" href="/">
+        <span>N</span>
+        <span>o</span>
+        <span>e</span>
+        <span>l</span>
+        <span>T</span>
+        <span>r</span>
+        <span>a</span>
+        <span>v</span>
+        <span>e</span>
+        <span>l</span>
+      </a>
+      
     </div>    
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="/" style="font-size: 20px">Home</a></li>
-        <li><a href="admin" style="font-size: 20px">Admin</a></li>
-        <li><a href="members" style="font-size: 20px">Member</a></li>
+        <li class="<%=currentPage === 'home' ? 'active' : ''%>"><a href="/">Home Page</a></li>
+        <li class="<%=currentPage === 'admin' ? 'active' : ''%>"><a href="/admin">Admin Page</a></li>
+        <li class="<%=currentPage === 'members' ? 'active' : ''%>"><a href="/members">Members Page</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if (authenticated) { %>
-          <li><a href="/logout" style="font-size: 20px">Log-out</a></li>
+          <li><a href="/logout" style="font-size: 20px; color: yellow;">Log-out</a></li>
         <% } else { %>
           <li><a href="/login" style="font-size: 20px">Log-in</a></li>
         <% } %>
       </ul>
+      
     </div>
   </div>
 </nav>
