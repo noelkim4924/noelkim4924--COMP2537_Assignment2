@@ -1,0 +1,68 @@
+<%- include("templates/headers") %>
+<head>
+  <style>
+    .bordered-column {
+      padding: 15px;
+      border: 2px solid rgb(212, 212, 222);
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .bordered-column:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .uniform-image {
+      width: 250px;
+      height: 250px;
+      object-fit: contain;
+      margin: auto;
+    }
+  </style>
+</head>
+<div class="container-fluid">
+  <h1>Welcome to the Member's Area, <%= username %>!</h1>
+</div>
+<div class="container-fluid">
+  <h2 style="padding-bottom: 30px">Full of popular cat memes!</h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 bordered-column">
+      <img
+        src="travel1.jpeg"
+        class="img-responsive uniform-image"
+        alt="Travel Image 1"
+      />
+    </div>
+    <div class="col-sm-4 bordered-column">
+      <img src="travel2.jpeg" class="img-responsive uniform-image" alt="Travel Image 2" />
+    </div>
+    <div class="col-sm-4 bordered-column">
+      <img
+        src="travel3.jpg"
+        class="img-responsive uniform-image"
+        alt="Travel Image 3"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" style="padding-top: 50px; padding-bottom: 30px;">
+  <a
+    class="btn btn-primary"
+    href="/"
+    role="button"
+    style="margin: auto; padding: 10px; font-size: 20px"
+    >Home</a
+  >
+  <a
+    class="btn btn-primary"
+    href="/logout"
+    role="button"
+    style="margin: auto; padding: 10px; font-size: 20px"
+    >Log out</a
+  >
+</div>
+<%- include("templates/footer") %>
